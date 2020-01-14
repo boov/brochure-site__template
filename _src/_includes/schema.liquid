@@ -1,0 +1,38 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "#localbusiness",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "image": "/_assets/images/schema_logo.png",
+        "telephone": "+447815170405",
+        "email": "hello@boov.co.uk",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "19 Anchor Street, Southport, PR9 0UT"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "priceRange": "Varies"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "#website",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}"
+      },
+      {
+        "@type": "Organization",
+        "@id": "#organization",
+        "name": "{{ site.name }}",
+        "logo": "/_assets/images/schema_logo.png",
+        "url": "{{ site.url }}",
+        "sameAs": [
+          {% for link in social %}"{{ link }}"{% endfor %}
+        ]
+      }
+    ]
+  }
+  </script>

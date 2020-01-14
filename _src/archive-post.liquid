@@ -1,0 +1,30 @@
+---
+layout: default
+permalink: blog{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}/index.html
+pagination:
+  alias: post
+  data: posts
+  size: 10
+---
+
+<div class="c_site">
+  <main class="c_main">
+    <h1>API Posts</h1>
+    <ul>
+
+      {% for post in pagination.items %}
+
+          <li>
+            <h2><a href="/blog/{{ post.title | slug }}">{{ post.title }}</a></h2>
+            <p>{{ post.body }}</p>
+          </li>
+
+      {% endfor %}
+
+    </ul>
+    <ul>
+      {% if pagination.previousPageHref %}<li><a href="{{ pagination.previousPageHref }}">Previous page</a></li>{% endif %}
+      {% if pagination.nextPageHref %}<li><a href="{{ pagination.nextPageHref }}">Next page</a></li>{% endif %}
+    </ul>
+  </main>
+</div>

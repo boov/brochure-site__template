@@ -1,0 +1,8 @@
+[build]
+  publish = "_dist"
+  command = "npm run production"
+  functions = "_src/_functions/"
+
+[[redirects]]
+  from = "/old"
+  to = "/new/:splat"

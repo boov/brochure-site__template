@@ -1,0 +1,29 @@
+{
+  "name": "brochure-site__template",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Matthew Booth <matthew@boov.co.uk>",
+  "scripts": {
+    "clean": "rimraf _dist",
+    "purge": "node purgecss.js",
+    "eleventy:development": "cross-env NODE_ENV=development eleventy --serve --quiet --watch",
+    "eleventy:production": "cross-env NODE_ENV=production eleventy",
+    "parcel:development": "cross-env NODE_ENV=development node parceljs.js",
+    "parcel:production": "cross-env NODE_ENV=production node parceljs.js",
+    "development": "npm run clean && concurrently --kill-others --raw \"npm run eleventy:development\" \"npm run parcel:development\"",
+    "production": "npm run clean && npm run eleventy:production && npm run parcel:production && npm run purge"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "concurrently": "^5.0.2",
+    "cookieconsent": "^3.1.1",
+    "cross-env": "^6.0.3",
+    "html-minifier": "^4.0.0",
+    "node-fetch": "^2.6.0",
+    "normalize.css": "^8.0.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "sass": "^1.24.4"
+  }
+}

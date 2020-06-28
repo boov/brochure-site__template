@@ -1,0 +1,17 @@
+---
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.all %}
+{%- unless item.data.sitemap == false %}
+  <url>
+    <loc>{{ app.url }}{{ item.url }}</loc>
+    <lastmod>{{ item.date | date: '%Y-%m-%dT%H:%M:%S+00:00' }}</lastmod>
+    <changefreq>{{ item.data.changefreq | default: 'monthly' }}</changefreq>
+    <priority>{{ item.data.priority | default: 0.5 }}</priority>
+  </url>
+{%- endunless %}
+{%- endfor %}
+</urlset>

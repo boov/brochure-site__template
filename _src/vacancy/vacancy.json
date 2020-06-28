@@ -1,0 +1,4 @@
+{
+  "layout": "vacancy",
+  "permalink": "/vacancies/{{ page.fileSlug | slug }}/index.html"
+}

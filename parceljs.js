@@ -8,14 +8,13 @@ const files = [
 ];
 
 const options = {
-  autoInstall: true,
   hmr: false,
   outDir: "./_dist/_assets",
-  scopeHoist: false,
+  publicUrl: "/_assets",
   sourceMaps: false
 };
 
-(async function() {
+(async function () {
   const bundler = new Parcel(files, options);
   await bundler.bundle();
 })();

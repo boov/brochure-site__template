@@ -1,0 +1,27 @@
+{%- if hero_enabled %}
+
+  {%- if hero_template == 'template-name' %}
+
+    <div class="c_hero --template-name">
+      <div class="l_container">
+        <div class="c_hero__content">
+          <h1 class="u_margin-bottom--half">{{ title }}</h1>
+          <p class="--lead u_margin-bottom--none">{{ description }}</p>
+        </div>
+      </div>
+    </div>
+
+  {%- else %}
+
+    <div class="c_hero">
+      <div class="l_container">
+        <div class="c_hero__content">
+          <h1 class="u_margin-bottom--half">{{ title }}</h1>
+          <p class="--lead u_margin-bottom--none">{{ description }}</p>
+        </div>
+      </div>
+    </div>
+
+  {%- endif %}
+
+{%- endif %}

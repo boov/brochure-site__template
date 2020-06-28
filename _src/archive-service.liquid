@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /services/
+title: Service Archive Title
+description: Service Archive Description
+---
+
+<section class="c_band">
+  <div class="l_container --lg">
+
+    {%- for service in collections.service %}
+
+      {%- include service/loop %}
+
+    {%- endfor %}
+
+  </div>
+</section>

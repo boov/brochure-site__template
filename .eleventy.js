@@ -1,34 +1,46 @@
+const env = process.env.NODE_ENV || "production";
 const htmlmin = require("html-minifier");
 const prettier = require("prettier");
-const env = process.env.NODE_ENV || "production";
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.addPassthroughCopy("cms.yml");
+  config.addPassthroughCopy("humans.txt");
 
-  config.addCollection("personnel", function(collection) {
+  config.addCollection("personnel", function (collection) {
     return collection.getFilteredByGlob("_src/personnel/*.md");
   });
 
-  // config.addCollection("post", function(collection) {
-  //   return collection.getFilteredByGlob("_src/post/*.md");
-  // });
+  config.addCollection("post", function (collection) {
+    return collection.getFilteredByGlob("_src/post/*.md").reverse();
+  });
 
-  config.addCollection("service", function(collection) {
+  config.addCollection("project", function (collection) {
+    return collection.getFilteredByGlob("_src/project/*.md").reverse();
+  });
+
+  config.addCollection("service", function (collection) {
     return collection.getFilteredByGlob("_src/service/*.md");
   });
 
-  config.addFilter("log", function(value) {
-    console.log(JSON.stringify(value));
-    return value;
+  config.addCollection("vacancy", function (collection) {
+    return collection.getFilteredByGlob("_src/vacancy/*.md").reverse();
   });
 
-  config.addFilter("currency", function(value) {
+  config.addFilter("gbp", function (value) {
     return "£" + value.toFixed(2);
   });
 
+  config.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
+  });
+
+  config.addFilter("thousands", function (value) {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  });
+
   if (env === "production") {
-    config.addTransform("minify", function(content, outputPath) {
-      if (outputPath.endsWith(".html")) {
+    config.addTransform("minify", function (content, outputPath) {
+      if (outputPath && outputPath.endsWith(".html")) {
         return htmlmin.minify(content, {
           useShortDoctype: true,
           removeComments: false,
@@ -39,13 +51,12 @@ module.exports = function(config) {
       return content;
     });
 
-    config.addTransform("prettify", function(content, outputPath) {
-      if (outputPath.endsWith(".html")) {
+    config.addTransform("prettify", function (content, outputPath) {
+      if (outputPath && outputPath.endsWith(".html")) {
         return prettier.format(content, {
           parser: "html",
           printWidth: 99999,
-          useTabs: true,
-          htmlWhitespaceSensitivity: "ignore"
+          useTabs: true
         });
       }
 

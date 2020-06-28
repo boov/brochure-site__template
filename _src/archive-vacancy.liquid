@@ -1,0 +1,32 @@
+---
+layout: default
+permalink: /vacancies/
+title: Vacancy Archive Title
+description: Vacancy Archive Description
+---
+
+<section class="c_band">
+  <div class="l_container --md">
+    <h2 class="--h7 u_margin-bottom--double">{{ collections.vacancy.size }} Available Positions</h2>
+
+    {%- if collections.vacancy.size > 0 %}
+
+      {%- for vacancy in collections.vacancy %}
+
+        {%- include vacancy/loop %}
+
+      {%- endfor %}
+
+    {%- else %}
+
+      <div class="c_notification --negative">
+        <div class="c_notification__content">
+          <h3 class="c_notification__title">Unfortunately we have no vacancies currently</h3>
+          <p>However, we are always keen to meet energetic and talented professionals who would like to join our team. If you wish to be considered for any future positions, please send your CV to <a href="mailto:{{ contact.email.default }}">{{ contact.email.default }}</a>.</p>
+        </div>
+      </div>
+
+    {%- endif %}
+
+  </div>
+</section>

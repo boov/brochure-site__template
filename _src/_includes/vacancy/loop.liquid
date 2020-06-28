@@ -1,0 +1,16 @@
+<div class="c_vacancy-loop">
+  <h2 class="c_vacancy-loop__title"><a href="{{ vacancy.url }}">{{ vacancy.data.title }}</a></h2>
+  <div class="c_vacancy-loop__content">
+    <p class="c_vacancy-loop__description">{{ vacancy.data.description }}</p>
+    <dl class="c_vacancy-loop__overview">
+      <dt>Added</dt>
+      <dd>{{ vacancy.data.date | date: "%d %B %Y" }}</dd>
+      <dt>Location</dt>
+      <dd>{{ vacancy.data.location }}</dd>
+      <dt>Salary</dt>
+      <dd>£{{ vacancy.data.salary | thousands }}</dd>
+      <dt>Contract</dt>
+      <dd>{{ vacancy.data.contract }}</dd>
+    </dl>
+  </div>
+</div>

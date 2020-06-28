@@ -1,23 +1,95 @@
 backend:
   name: git-gateway
-  branch: develop
-  accept_roles:
-    - admin
-    - editor
-
-publish_mode: editorial_workflow
+  branch: master
 
 media_folder: "_src/_assets/images/uploads"
-public_folder: "_dist/_assets/images/uploads"
+public_folder: "_assets/images/uploads"
 
 collections:
-  - name: "offers"
-    label: "Offers"
-    folder: "_src/offers"
+  - name: "post"
+    label: "Posts"
+    label_singular: "Post"
+    slug: "{{ slug }}"
     create: true
-    slug: "{{slug}}"
+    editor:
+      preview: false
+    extension: "md"
+    folder: "_src/post"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - {
+          label: "Posted",
+          name: "date",
+          widget: "date",
+          format: "DD MMMM YYYY",
+        }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Content", name: "body", widget: "markdown" }
+  - name: "project"
+    label: "Projects"
+    label_singular: "Project"
+    slug: "{{ slug }}"
+    create: true
+    editor:
+      preview: false
+    extension: "md"
+    folder: "_src/project"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "Capacity",
+          name: "capacity",
+          widget: "number",
+          default: 0,
+          min: 0,
+        }
+      - {
+          label: "Yearly Production",
+          name: "production",
+          widget: "number",
+          default: 0,
+          min: 0,
+        }
+  - name: "vacancy"
+    label: "Vacancies"
+    label_singular: "Vacancy"
+    slug: "{{ slug }}"
+    create: true
+    editor:
+      preview: false
+    extension: "md"
+    folder: "_src/vacancy"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Added", name: "date", widget: "date", format: "DD MMMM YYYY" }
+      - {
+          label: "Location",
+          name: "location",
+          widget: "string",
+          default: "London, SE21",
+        }
+      - {
+          label: "Salary",
+          name: "salary",
+          widget: "number",
+          default: 0,
+          min: 0,
+          step: 100,
+        }
+      - {
+          label: "Contract Type",
+          name: "contract",
+          widget: "select",
+          options: ["Contract", "Part Time", "Permanent", "Temporary"],
+        }
+      - {
+          label: "Closes",
+          name: "closes",
+          widget: "date",
+          format: "DD MMMM YYYY",
+        }
+      - { label: "Content", name: "body", widget: "markdown" }

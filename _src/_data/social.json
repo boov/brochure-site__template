@@ -1,6 +1,18 @@
-{
-  "facebook": "https://www.facebook.com/username/",
-  "instagram": "https://www.instagram.com/username/",
-  "linkedin": "https://www.linkedin.com/in/username/",
-  "twitter": "https://www.twitter.com/username/"
-}
+[
+  {
+    "name": "Facebook",
+    "url": "https://www.facebook.com/username/"
+  },
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/username/"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/username/"
+  },
+  {
+    "name": "Twitter",
+    "url": "https://www.twitter.com/username/"
+  }
+]

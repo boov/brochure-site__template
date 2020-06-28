@@ -1,5 +1,17 @@
 ---
-layout: admin
-title: Content Management System
-description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam quaerat aperiam quasi aliquid sed molestias labore recusandae voluptatem impedit consequuntur maiores dicta animi, ratione corporis doloribus harum nulla. Doloremque, placeat.
+sitemap: false
 ---
+
+<!doctype html>
+<html lang="{{ app.locale }}">
+  <head>
+    <title>Admin - {{ company.name.display }}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="cms-config-url" type="text/yaml" href="/cms.yml">
+  </head>
+  <body>
+    <script src="https://unpkg.com/netlify-cms@^2.1.0/dist/netlify-cms.js"></script>
+  </body>
+</html>

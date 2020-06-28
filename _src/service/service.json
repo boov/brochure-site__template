@@ -1,0 +1,4 @@
+{
+  "layout": "service",
+  "permalink": "/services/{{ page.fileSlug | slug }}/index.html"
+}

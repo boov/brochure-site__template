@@ -1,0 +1,15 @@
+{
+  "address": {
+    "default": "123 Example Building, Example Road, Example Town, EX4 MPL"
+  },
+  "email": {
+    "default": "info@domain.com",
+    "recruitment": "recruitment@domain.com"
+  },
+  "phone": {
+    "default": {
+      "display": "01234 567 890",
+      "href": "+1234567890‬"
+    }
+  }
+}

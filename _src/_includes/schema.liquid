@@ -3,35 +3,73 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
-        "@id": "#localbusiness",
-        "name": "{{ site.name }}",
-        "url": "{{ site.url }}",
-        "image": "/_assets/images/schema_logo.png",
-        "telephone": "+447815170405",
-        "email": "hello@boov.co.uk",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "19 Anchor Street, Southport, PR9 0UT"
+        "@type": "Organization",
+        "@id": "{{ app.url }}/#organization",
+        "name": "{{ company.name.display }}",
+        "url": "{{ app.url }}",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "{{ app.url }}/#logo",
+          "inLanguage": "{{ app.locale }}",
+          "url": "/_assets/images/schema_logo.png?ver={{ app.time }}",
+          "width": 640,
+          "height": 320,
+          "caption": "{{ company.name.display }}"
         },
-        "openingHours": "Mo-Fr 09:00-18:00",
-        "priceRange": "Varies"
+        "image": {
+          "@id": "{{ app.url }}/#logo"
+        },
+        "sameAs": [
+          {%- for network in social %}
+          "{{ network.url }}"{%- unless forloop.last %},{%- endunless %}
+          {%- endfor %}
+        ]
       },
       {
         "@type": "WebSite",
-        "@id": "#website",
-        "name": "{{ site.name }}",
-        "url": "{{ site.url }}"
+        "@id": "{{ app.url }}/#website",
+        "url": "{{ app.url }}",
+        "name": "{{ company.name.display }}",
+        "inLanguage": "{{ app.locale }}",
+        "publisher": {
+          "@id": "{{ app.url }}/#organization"
+        }
       },
       {
-        "@type": "Organization",
-        "@id": "#organization",
-        "name": "{{ site.name }}",
-        "logo": "/_assets/images/schema_logo.png",
-        "url": "{{ site.url }}",
-        "sameAs": [
-          {% for link in social %}"{{ link }}"{% endfor %}
+        "@type": "WebPage",
+        "@id": "{{ app.url }}/#webpage",
+        "url": "{{ app.url }}",
+        "name": "{{ title | default: app.title }} - {{ company.name.display }}",
+        "isPartOf": {
+          "@id": "{{ app.url }}/#website"
+        },
+        "inLanguage": "{{ app.locale }}",
+        "about": {
+          "@id": "{{ app.url }}/#organization"
+        },
+        "potentialAction": [
+          {
+            "@type": "ReadAction",
+            "target": [
+              "{{ app.url }}"
+            ]
+          }
         ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "{{ app.url }}/#localbusiness",
+        "name": "{{ company.name.display }}",
+        "url": "{{ app.url }}",
+        "image": "/_assets/images/schema_logo.png?ver={{ app.time }}",
+        "telephone": "{{ contact.phone.default.href }}",
+        "email": "{{ contact.email.default }}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "{{ contact.address.default }}"
+        },
+        "openingHours": "{{ company.openingHours }}",
+        "priceRange": "Varies"
       }
     ]
   }

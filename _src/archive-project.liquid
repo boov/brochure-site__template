@@ -1,0 +1,31 @@
+---
+layout: default
+permalink: /projects/
+title: Project Archive Title
+description: Project Archive Description
+---
+
+<section class="c_band">
+  <div class="l_container --lg">
+
+    {%- if collections.project.size > 0 %}
+
+      {%- for project in collections.project %}
+
+        {%- include project/loop %}
+
+      {%- endfor %}
+
+    {%- else %}
+
+      <div class="c_notification --negative">
+        <div class="c_notification__content">
+          <h3 class="c_notification__title">Need Error Message Here</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eius soluta reiciendis non debitis corrupti nulla similique commodi, consequatur ullam voluptate dolore doloribus provident vitae tenetur enim dolorem quia totam!</p>
+        </div>
+      </div>
+
+    {%- endif %}
+
+  </div>
+</section>

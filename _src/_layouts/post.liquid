@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<section class="c_band">
+  <div class="l_container --md">
+    <div class="u_margin-bottom--s3">
+      <nav class="c_breadcrumbs">
+        <ul class="c_breadcrumbs__list">
+          <li class="c_breadcrumbs__item"><a href="/" class="c_breadcrumbs__link">Home</a></li>
+          <li class="c_breadcrumbs__item"><a href="/news" class="c_breadcrumbs__link">Latest News & Updates</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h1 class="u_margin-bottom--s3">{{ title }}</h1>
+    <h2 class="--alternative u_margin-bottom--none">Posted {{ date | date: "%d %B %Y" }}</h2>
+  </div>
+  <div class="l_container --content">
+    <img src="{{ featured_image }}">
+  </div>
+  <div class="l_container --md">
+    <div class="c_content u_margin-bottom--s4 u_margin-bottom--none--md">
+
+      {{ content | safe }}
+
+    </div>
+  </div>
+
+  {%- if collections.post.size >= 3 %}
+
+    <div class="l_container">
+      <hr class="--fancy --no-margin">
+    </div>
+    <div class="l_container">
+      <h2 class="--h3 u_margin-bottom--double--lg">Latest Posts</h2>
+      <div class="l_grid --tight--sm --comfortable--md --columns-3--sm">
+
+        {%- for post in collections.post limit:3  %}
+
+          {%- include post/loop %}
+
+        {%- endfor %}
+
+      </div>
+    </div>
+
+  {%- endif %}
+
+</section>

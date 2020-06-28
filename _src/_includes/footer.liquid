@@ -1,0 +1,41 @@
+<div class="c_footer">
+  <div class="l_container">
+    <div class="l_flex --loose --justify-between">
+      <div class="l_flex__item --shrink">
+        <svg class="c_footer__logo" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"/>
+        </svg>
+      </div>
+      <div class="l_flex__item --shrink">
+
+        {%- include navigation/social %}
+
+      </div>
+    </div>
+  </div>
+  <div class="l_container">
+    <div class="l_flex --loose --justify-between">
+      <div class="l_flex__item --span-12 --span-4--lg">
+        <h5>{{ seo.title }}</h5>
+        <p class="u_margin-bottom--s4 u_margin-bottom--none--lg">{{ seo.description }}</p>
+      </div>
+      <div class="l_flex__item --span-12 --shrink--lg">
+        <h5>Other Links</h5>
+
+        {%- include navigation/footer %}
+
+      </div>
+      <div class="l_flex__item --span-12 --span-3--lg">
+        <h5>Contact Details</h5>
+        <dl class="u_margin-bottom--none">
+          <dt>Phone</dt>
+          <dd><a href="tel:{{ contact.phone.default.href }}">{{ contact.phone.default.display }}</a></dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:{{ contact.email.default }}">{{ contact.email.default }}</a></dd>
+          <dt>Post</dt>
+          <dd>{{ contact.address.default }}</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>

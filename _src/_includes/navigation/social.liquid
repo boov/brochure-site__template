@@ -1,0 +1,11 @@
+<nav class="c_social-navigation">
+  <ul class="c_social-navigation__menu">
+
+    {%- for network in social %}
+
+      <li class="c_footer-navigation__item"><a href="{{ network.url }}" class="c_footer-navigation__link c_icomoon --{{ network.name | downcase }}" target="_blank" rel="noopener" aria-label="View our {{ network.name }} profile" title="View our {{ network.name }} profile"></a></li>
+
+    {%- endfor %}
+
+  </ul>
+</nav>

@@ -1,30 +1,51 @@
 ---
 layout: default
-permalink: blog{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}/index.html
+permalink: /posts/{%- if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus:1 }}/{%- endif %}index.html
+title: Post Archive Title
+description: Post Archive Description
 pagination:
-  alias: post
-  data: posts
+  data: collections.post
   size: 10
+  alias: posts
 ---
 
-<div class="c_site">
-  <main class="c_main">
-    <h1>API Posts</h1>
-    <ul>
+<section class="c_band">
 
-      {% for post in pagination.items %}
+  {%- if collections.post.size > 0 %}
 
-          <li>
-            <h2><a href="/blog/{{ post.title | slug }}">{{ post.title }}</a></h2>
-            <p>{{ post.body }}</p>
-          </li>
+    <div class="l_container">
+      <div class="l_grid --columns-2--sm --columns-3--md">
 
-      {% endfor %}
+        {%- for post in posts %}
 
-    </ul>
-    <ul>
-      {% if pagination.previousPageHref %}<li><a href="{{ pagination.previousPageHref }}">Previous page</a></li>{% endif %}
-      {% if pagination.nextPageHref %}<li><a href="{{ pagination.nextPageHref }}">Next page</a></li>{% endif %}
-    </ul>
-  </main>
-</div>
+          {%- include post/loop %}
+
+        {%- endfor %}
+
+      </div>
+    </div>
+
+    {%- if pagination.pageLinks.length > 1 %}
+
+      <div class="l_container">
+
+        {%- include pagination %}
+
+      </div>
+
+    {%- endif %}
+
+  {%- else %}
+
+    <div class="l_container">
+      <div class="c_notification --negative">
+        <div class="c_notification__content">
+          <h3 class="c_notification__title">Need Error Message Here</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eius soluta reiciendis non debitis corrupti nulla similique commodi, consequatur ullam voluptate dolore doloribus provident vitae tenetur enim dolorem quia totam!</p>
+        </div>
+      </div>
+    </div>
+
+  {%- endif %}
+
+</section>

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<section class="c_band">
+  <div class="l_container --lg">
+    <div class="l_flex">
+      <div class="l_flex__item --span-12 --span-10--lg">
+        <div class="u_margin-bottom--s3">
+          <nav class="c_breadcrumbs">
+            <ul class="c_breadcrumbs__list">
+              <li class="c_breadcrumbs__item"><a href="/" class="c_breadcrumbs__link">Home</a></li>
+              <li class="c_breadcrumbs__item"><a href="/vacancies" class="c_breadcrumbs__link">Vacancies</a></li>
+            </ul>
+          </nav>
+        </div>
+        <h1 class="u_margin-bottom--half">{{ title }}</h1>
+        <p class="--lead u_margin-bottom--none">{{ description }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="l_container --lg">
+    <div class="l_flex --justify-between">
+      <div class="l_flex__item --span-12 --span-7--md --span-7--lg">
+        <div class="c_content u_margin-bottom--s4 u_margin-bottom--none--md">
+
+          {{ content | safe }}
+
+        </div>
+      </div>
+      <div class="l_flex__item --span-12 --span-5--md --span-4--lg">
+        <div class="c_box u_margin-bottom--s4 u_margin-bottom--none--md">
+          <dl>
+            <dt>Added</dt>
+            <dd>{{ date | date: "%d %B %Y" }}</dd>
+            <dt>Location</dt>
+            <dd>{{ location }}</dd>
+            <dt>Salary</dt>
+            <dd>£{{ salary | thousands }}</dd>
+            <dt>Contract</dt>
+            <dd>{{ contract }}</dd>
+            <dt>Closes</dt>
+            <dd>{{ closes | date: "%d %B %Y" }}</dd>
+          </dl>
+        </div>
+        <div class="u_padding--s4--md u_font-size--small">
+          <h3 class="--h7">How To Apply</h3>
+          <p>To apply please send your CV and a covering letter <a href="mailto:{{ contact.email.recruitment }}">here</a>. For further information, or to have an informal chat about the role please email the above address or call <a href="tel:{{ contact.phone.default.href }}">{{ contact.phone.default.display }}</a>.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,34 @@
+---
+layout: default
+permalink: /about/
+title: About Page Title
+description: About Page Description
+---
+
+<section class="c_band">
+  <div class="l_container --lg">
+    <p class="--lead">Alias ducimus architecto molestiae qui harum asperiores ab accusantium. Rerum aliquam tenetur totam a laborum est accusantium suscipit blanditiis, quis, dolorem animi cupiditate repellendus facere accusamus odit doloribus esse placeat?</p>
+    <p>Optio delectus numquam aliquam asperiores! Ex vero fugiat commodi. Eveniet adipisci est aliquam illum perferendis rem impedit neque asperiores, delectus iure id. Deleniti voluptas, aut fugiat quis et nihil deserunt.</p>
+    <p>Fugiat quae et impedit pariatur dolores, consequatur quia, doloribus praesentium enim cupiditate soluta consectetur exercitationem maxime hic error expedita voluptas qui blanditiis veniam laboriosam iste porro magnam. Aperiam, officiis ut.</p>
+  </div>
+  <div class="l_container --lg">
+    <h2 class="--h3 u_margin-bottom--double--lg">Meet the Team</h2>
+    <div class="l_flex --loose--md">
+
+      {%- if collections.personnel.size > 0 %}
+
+        {%- for personnel in collections.personnel %}
+
+          <div class="l_flex__item --span-12 --sm">
+
+            {%- include personnel/loop %}
+
+          </div>
+
+        {%- endfor %}
+
+      {%- endif %}
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+<article class="c_testimonial">
+  <div class="c_testimonial__content">
+
+    {{ testimonial.templateContent | safe }}
+
+  </div>
+  <footer class="c_testimonial__footer">
+    <img src="{{ testimonial.data.avatar }}" alt="" class="c_testimonial__image">
+    <div class="c_testimonial__author">
+      <p class="c_testimonial__name">{{ testimonial.data.author }}</p>
+      <p class="c_testimonial__note">{{ testimonial.data.cite }}</p>
+    </div>
+  </footer>
+</article>

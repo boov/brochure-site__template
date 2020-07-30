@@ -1,7 +1,7 @@
 ---
 title: Example Title
 description: Suspendisse potenti. Etiam lobortis eros eu dui ultricies sollicitudin. Etiam vel ante sit amet odio volutpat iaculis. Nulla facilisi.
-featured_image: https://images.unsplash.com/photo-1500382017468-9049fed747ef?fit=crop&w=390&q=80&h=390
+featured_image: https://source.unsplash.com/random/390x390
 ---
 
 Nulla mattis varius nulla eget ullamcorper. In pulvinar interdum pulvinar. Curabitur pretium in neque eget accumsan. Fusce ornare velit non erat mattis tincidunt. Mauris elit metus, tempor ac suscipit sit amet, venenatis et neque. Vivamus suscipit accumsan rutrum. Fusce ut nulla ante. Fusce nec interdum tellus, id lacinia leo.

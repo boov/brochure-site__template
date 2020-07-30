@@ -1,8 +1,8 @@
 ---
-title: The Quick Brown Fox Jumps Over the Lazy Dog 1
+title: Example Service
 description: Donec fringilla purus velit, in pulvinar justo pulvinar et. Etiam et porta turpis. Aliquam in nunc lacus. Nullam dignissim aliquet augue. Donec tristique est diam, et tincidunt magna fermentum et.
 date: 2020-01-01
-featured_image: https://images.unsplash.com/photo-1501707305551-9b2adda5e527?fit=crop&h=810&q=80&w=1440
+featured_image: https://source.unsplash.com/random/1440x810
 ---
 
 Vivamus pellentesque aliquet condimentum. Etiam commodo hendrerit neque, vel viverra risus. Suspendisse potenti. Praesent id imperdiet metus.

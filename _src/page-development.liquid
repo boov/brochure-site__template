@@ -1,0 +1,189 @@
+---
+layout: default
+permalink: /development/
+title: Development Page
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nihil incidunt quae maxime dolores eum doloremque perferendis cumque deleniti dolorum, sed, nisi, labore itaque architecto? Porro quod unde veniam non.
+palettes: ['default', 'invert', 'action', 'brand']
+---
+
+{% for item in palettes %}
+
+  <section class="c_band ~~{{ item }}">
+    <div class="l_container --md c_content">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p class="--lead">Molestias, facere nam vel tempora fugit fuga corporis quidem ratione suscipit inventore dignissimos deleniti a expedita alias, blanditiis asperiores velit error minima. Ipsa, eum. Voluptates facilis voluptatum quidem debitis earum.</p>
+      <p>Sint vero ducimus sit incidunt ipsum ab? Animi iusto alias nemo! Quos, eaque quibusdam sequi architecto dolorem nemo. Animi rem corporis error voluptate pariatur harum at facere nam molestiae voluptatem?</p>
+      <p>Animi, nulla totam. Earum ipsam magni iure nesciunt, commodi pariatur consequuntur impedit, possimus repudiandae assumenda nemo officia suscipit maiores sint molestias dolore eius, totam velit amet autem minus? Quod, reprehenderit!</p>
+      <a class="e_button --small" href="#">Primary Button</a>
+      <hr>
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <p>Pellentesque <a href="#">habitant morbi tristique</a> senectus et netus et malesuada <mark>fames ac turpis</mark> egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Table Header</th>
+            <th>Table Header</th>
+            <th>Table Header</th>
+            <th>Table Header</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Table Footer</th>
+            <th>Table Footer</th>
+            <th>Table Footer</th>
+            <th>Table Footer</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th>Row Heading</th>
+            <td>Cell Data</td>
+            <td>Cell Data</td>
+            <td>Cell Data</td>
+          </tr>
+          <tr>
+            <th>Row Heading</th>
+            <td>Cell Data</td>
+            <td><a href="#">Cell Data</a></td>
+            <td>Cell Data</td>
+          </tr>
+          <tr>
+            <th>Row Heading</th>
+            <td>Cell Data</td>
+            <td>Cell Data</td>
+            <td>Cell Data</td>
+          </tr>
+          <tr>
+            <th>Row Heading</th>
+            <td>Cell Data</td>
+            <td>Cell Data</td>
+            <td>Cell Data</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <h3 class="--smallcaps">Lorem ipsum dolor sit amet</h3>
+      <p>Facilis facere inventore pariatur modi culpa error, doloribus necessitatibus reprehenderit consectetur adipisci ullam deleniti maiores ad asperiores cumque delectus fugiat. Nulla perspiciatis reiciendis dolorem, tenetur eaque repellendus hic inventore illum.</p>
+      <blockquote>
+        <p>Reiciendis incidunt quisquam sequi neque ab, facilis dolor magnam consequatur excepturi dignissimos quaerat, ex, placeat natus omnis. Ad, illo mollitia tempora hic voluptate sapiente facilis deserunt minima libero ullam? Suscipit?</p>
+        <cite>Quote Author</cite>
+      </blockquote>
+      <p>Cum necessitatibus alias sed, earum reiciendis quisquam rerum quia eum iste ipsam vel, iure illo, odit dolores incidunt dolorum atque harum. Quia, pariatur. Consequuntur blanditiis deleniti odio, similique corporis impedit?</p>
+    </div>
+  </section>
+
+{% endfor %}
+
+<section class="c_band">
+  <div class="l_container --md c_content">
+    <h1>This is the primary heading and there should only be one of these per page</h1>
+    <p>A small paragraph to <em>emphasis</em> and show <strong>important</strong> bits.</p>
+    <form action="">
+      <fieldset>
+        <legend>Fieldset Legend</legend>
+        <div class="c_input-group">
+          <label for="asd">Test Label <span>Required</span></label>
+          <input type="text" name="text" id="asd">
+        </div>
+        <div class="c_input-group --actions">
+          <button class="--small" type="submit">Button Submit</button>
+          <button class="--small" type="reset">Button Reset</button>
+          <input class="--small" type="submit" value="Input Submit">
+          <input class="--small" type="reset" value="Input Reset">
+        </div>
+      </fieldset>
+    </form>
+    <ul>
+      <li>This is a list item</li>
+      <li>So is this - there could be more</li>
+      <li>Make sure to style list items to:
+        <ul>
+          <li>Not forgetting child list items</li>
+          <li>Not <a href="#">forgetting child</a> list items</li>
+          <li>Not forgetting child list items</li>
+          <li>Not forgetting child list items</li>
+        </ul>
+      </li>
+      <li>A couple more</li>
+      <li>top level list items</li>
+    </ul>
+    <p>Don't forget <strong>Ordered lists</strong>:</p>
+    <ol>
+      <li>Lorem ipsum dolor <a href="#">sit amet</a>, consectetuer adipiscing elit.</li>
+      <li>Aliquam tincidunt mauris eu risus.
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+          <li>Aliquam tincidunt mauris eu risus.</li>
+        </ol>
+      </li>
+      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+      <li>Aliquam tincidunt mauris eu risus.</li>
+    </ol>
+    <h2 class="--underline">A sub heading which is not as important as the first, but is quite imporant overall</h2>
+    <p>Pellentesque <a href="#">habitant morbi tristique</a> senectus et netus et malesuada <mark>fames ac turpis</mark> egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Table Header</th>
+          <th>Table Header</th>
+          <th>Table Header</th>
+          <th>Table Header</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Table Footer</th>
+          <th>Table Footer</th>
+          <th>Table Footer</th>
+          <th>Table Footer</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <th>Row Heading</th>
+          <td>Cell Data</td>
+          <td>Cell Data</td>
+          <td>Cell Data</td>
+        </tr>
+        <tr>
+          <th>Row Heading</th>
+          <td>Cell Data</td>
+          <td><a href="#">Cell Data</a></td>
+          <td>Cell Data</td>
+        </tr>
+        <tr>
+          <th>Row Heading</th>
+          <td>Cell Data</td>
+          <td>Cell Data</td>
+          <td>Cell Data</td>
+        </tr>
+        <tr>
+          <th>Row Heading</th>
+          <td>Cell Data</td>
+          <td>Cell Data</td>
+          <td>Cell Data</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="--smallcaps">A sub heading which is not as important as the second, but should be used with consideration</h3>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <blockquote>
+      <p>Reiciendis incidunt quisquam sequi neque ab, facilis dolor magnam consequatur excepturi dignissimos quaerat, ex, placeat natus omnis. Ad, illo mollitia tempora hic voluptate sapiente facilis deserunt minima libero ullam? Suscipit?</p>
+      <p>Nisi est perferendis ullam! Esse unde adipisci voluptates ex expedita maxime voluptatem doloremque tempore voluptatibus quia laudantium natus earum ullam ipsa eligendi distinctio eos placeat, provident ratione aspernatur delectus molestias?</p>
+      <cite>Quote Author</cite>
+    </blockquote>
+    <h4>A sub heading which is not as <a href="#">important as the second</a>, but should be used with consideration</h4>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <h5>A sub heading which is not as important as the second, but should be used with consideration</h5>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <dl>
+      <dt>Definition list</dt>
+      <dd>Consectetur adipisicing elit, sed do <a href="#">eiusmod tempor</a> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+      <dt>Lorem ipsum dolor sit amet</dt>
+      <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+    </dl>
+    <h6>This heading plays a relatively small bit part role, if you use it at all</h6>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  </div>
+</section>

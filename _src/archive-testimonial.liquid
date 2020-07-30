@@ -1,19 +1,18 @@
 ---
 layout: default
-permalink: /projects/
-title: Project Archive Title
-description: Project Archive Description
-hero_width: lg
+permalink: /testimonials/
+title: Testimonial Archive Title
+description: Testimonial Archive Description
 ---
 
 <section class="c_band">
   <div class="l_container --lg">
 
-    {%- if collections.project.size > 0 %}
+    {%- if collections.testimonial.size > 0 %}
 
-      {%- for project in collections.project %}
+      {%- for testimonial in collections.testimonial %}
 
-        {%- include project/loop %}
+        {%- include testimonial/loop %}
 
       {%- endfor %}
 

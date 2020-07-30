@@ -6,6 +6,10 @@ module.exports = function (config) {
   config.addPassthroughCopy("cms.yml");
   config.addPassthroughCopy("humans.txt");
 
+  config.addCollection("dish", function (collection) {
+    return collection.getFilteredByGlob("_src/dish/*.md");
+  });
+
   config.addCollection("personnel", function (collection) {
     return collection.getFilteredByGlob("_src/personnel/*.md");
   });
@@ -20,6 +24,10 @@ module.exports = function (config) {
 
   config.addCollection("service", function (collection) {
     return collection.getFilteredByGlob("_src/service/*.md");
+  });
+
+  config.addCollection("testimonial", function (collection) {
+    return collection.getFilteredByGlob("_src/testimonial/*.md");
   });
 
   config.addCollection("vacancy", function (collection) {

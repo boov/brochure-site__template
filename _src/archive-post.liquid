@@ -10,10 +10,10 @@ pagination:
 ---
 
 <section class="c_band">
+  <div class="l_container">
 
-  {%- if collections.post.size > 0 %}
+    {%- if collections.post.size > 0 %}
 
-    <div class="l_container">
       <div class="l_grid --columns-2--sm --columns-3--md">
 
         {%- for post in posts %}
@@ -23,29 +23,23 @@ pagination:
         {%- endfor %}
 
       </div>
-    </div>
 
     {%- if pagination.pageLinks.length > 1 %}
 
-      <div class="l_container">
-
-        {%- include pagination %}
-
-      </div>
+      {%- include pagination %}
 
     {%- endif %}
 
   {%- else %}
 
-    <div class="l_container">
-      <div class="c_notification --negative">
-        <div class="c_notification__content">
-          <h3 class="c_notification__title">Need Error Message Here</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eius soluta reiciendis non debitis corrupti nulla similique commodi, consequatur ullam voluptate dolore doloribus provident vitae tenetur enim dolorem quia totam!</p>
-        </div>
+    <div class="c_notification --negative">
+      <div class="c_notification__content">
+        <h3 class="c_notification__title">Need Error Message Here</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eius soluta reiciendis non debitis corrupti nulla similique commodi, consequatur ullam voluptate dolore doloribus provident vitae tenetur enim dolorem quia totam!</p>
       </div>
     </div>
 
   {%- endif %}
 
+  </div>
 </section>

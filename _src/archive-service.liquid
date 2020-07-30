@@ -6,13 +6,15 @@ description: Service Archive Description
 ---
 
 <section class="c_band">
-  <div class="l_container --lg">
+  <div class="l_container">
+    <div class="l_grid --columns-3">
 
-    {%- for service in collections.service %}
+      {%- for service in collections.service %}
 
-      {%- include service/loop %}
+        {%- include service/loop %}
 
-    {%- endfor %}
+      {%- endfor %}
 
+    </div>
   </div>
 </section>

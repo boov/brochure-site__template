@@ -1,0 +1,9 @@
+<div class="c_dish-loop">
+  <a href="{{ dish.url }}"><img class="c_dish-loop__image" src="{{ dish.data.featured_image }}" alt="{{ dish.data.title }}"></a>
+  <div class="c_dish-loop__content">
+    <h2 class="c_dish-loop__title"><a href="{{ dish.url }}">{{ dish.data.title }}</a></h2>
+    <ul class="c_dish-loop__meta">
+      <li>{{ dish.data.date | date: "%d %B %Y" }}</li>
+    </ul>
+  </div>
+</div>

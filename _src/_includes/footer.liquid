@@ -1,10 +1,12 @@
 <div class="c_footer">
-  <div class="l_container">
+  <div class="l_container u_margin-bottom--s5">
     <div class="l_flex --loose --justify-between">
       <div class="l_flex__item --shrink">
-        <svg class="c_footer__logo" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 100 100">
+
+        <svg class="c_company-logo --small" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="100px" width="100px" viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="50"/>
         </svg>
+
       </div>
       <div class="l_flex__item --shrink">
 
@@ -16,17 +18,17 @@
   <div class="l_container">
     <div class="l_flex --loose --justify-between">
       <div class="l_flex__item --span-12 --span-4--lg">
-        <h5>{{ seo.title }}</h5>
+        <h6>{{ seo.title }}</h6>
         <p class="u_margin-bottom--s4 u_margin-bottom--none--lg">{{ seo.description }}</p>
       </div>
       <div class="l_flex__item --span-12 --shrink--lg">
-        <h5>Other Links</h5>
+        <h6>Other Links</h6>
 
         {%- include navigation/footer %}
 
       </div>
       <div class="l_flex__item --span-12 --span-3--lg">
-        <h5>Contact Details</h5>
+        <h6>Contact Details</h6>
         <dl class="u_margin-bottom--none">
           <dt>Phone</dt>
           <dd><a href="tel:{{ contact.phone.default.href }}">{{ contact.phone.default.display }}</a></dd>

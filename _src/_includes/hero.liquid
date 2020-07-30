@@ -14,7 +14,7 @@
   {%- else %}
 
     <div class="c_hero">
-      <div class="l_container">
+      <div class="l_container --{{ hero_width | default: 'xl' }}">
         <div class="c_hero__content">
           <h1 class="u_margin-bottom--half">{{ title }}</h1>
           <p class="--lead u_margin-bottom--none">{{ description }}</p>

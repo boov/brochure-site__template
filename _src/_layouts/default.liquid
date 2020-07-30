@@ -22,6 +22,7 @@ hero_template: default
     <link rel="icon" type="image/png" sizes="32x32" href="/_assets/images/icon_32.png?ver={{ app.time }}">
     <link rel="icon" type="image/png" sizes="96x96" href="/_assets/images/icon_96.png?ver={{ app.time }}">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="/_assets/styles/main.css?ver={{ app.time }}">
 
     {%- include schema %}
@@ -40,7 +41,7 @@ hero_template: default
     {%- if seo.gtmContainer  %}<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ seo.gtmContainer }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>{%- endif %}
 
     <div class="c_site">
-      <header class="c_header-group">
+      <header class="c_header-group ~~invert">
 
         {%- include banner %}
         {%- include hero %}
@@ -51,7 +52,7 @@ hero_template: default
         {{ content | safe }}
 
       </main>
-      <footer class="c_footer-group">
+      <footer class="c_footer-group ~~invert">
 
         {%- include cta %}
         {%- include footer %}

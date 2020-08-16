@@ -52,8 +52,8 @@ cta_enabled: false
         </form>
       </div>
       <div class="l_flex__item --span-12 --span-4--lg">
-        <div class="l_sidebar">
-          <div class="l_sidebar__item">
+        <div class="l_stack --gap-s4">
+          <div class="l_stack__item">
             <h2 class="--h5">Contact Details</h2>
             <dl class="u_font-size--small">
               <dt>Phone</dt>
@@ -64,8 +64,8 @@ cta_enabled: false
               <dd>{{ contact.address.default }}</dd>
             </dl>
           </div>
-          <div class="l_sidebar__item">
-            <figure>
+          <div class="l_stack__item">
+            <figure class="u_margin--none">
               <a href="https://www.google.com/maps/dir//{{ contact.address.default | url_encode }}" target="_blank" rel="noopener"><img src="/_assets/images/map.png?ver={{ app.time }}" alt="Google map image of office location"></a>
               <figcaption><a href="https://www.google.com/maps/dir//{{ contact.address.default | url_encode }}" target="_blank" rel="noopener" class="e_button --text">Get Directions &raquo;</a></figcaption>
             </figure>

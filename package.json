@@ -1,8 +1,8 @@
 {
   "name": "brochure-site__template",
   "version": "1.0.0",
-  "private": true,
   "author": "Matthew Booth <matthew@boov.co.uk>",
+  "license": "MIT",
   "scripts": {
     "clean": "rimraf _dist",
     "eleventy:development": "cross-env NODE_ENV=development eleventy --serve --quiet --watch",

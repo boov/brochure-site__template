@@ -1,0 +1,16 @@
+<div class="c_hero --home">
+  <div class="l_container --{{ hero_width | default: 'xl' }}">
+    <div class="c_hero__content">
+      <h2 class="--smallcaps">{{ company.name.display }}</h2>
+      <h1 class="--h0 u_margin-bottom--half">{{ seo.title }}</h1>
+      <p class="--lead u_margin-bottom--none">{{ seo.description }}</p>
+    </div>
+
+    {%- if image %}
+
+      <img class="c_hero__image" src="{{ image }}" alt="{{ title }}">
+
+    {%- endif %}
+
+  </div>
+</div>

@@ -3,7 +3,8 @@ layout: default
 permalink: /contact/
 title: Contact Page Title
 description: Contact Page Description
-cta_enabled: false
+excerpt: Contact Page Excerpt
+image: https://source.unsplash.com/random/1920x1080
 ---
 
 <section class="c_band">
@@ -67,7 +68,7 @@ cta_enabled: false
           <div class="l_stack__item">
             <figure class="u_margin--none">
               <a href="https://www.google.com/maps/dir//{{ contact.address.default | url_encode }}" target="_blank" rel="noopener"><img src="/_assets/images/map.png?ver={{ app.time }}" alt="Google map image of office location"></a>
-              <figcaption><a href="https://www.google.com/maps/dir//{{ contact.address.default | url_encode }}" target="_blank" rel="noopener" class="e_button --text">Get Directions &raquo;</a></figcaption>
+              <figcaption><a href="https://www.google.com/maps/dir//{{ contact.address.default | url_encode }}" target="_blank" rel="noopener" class="e_button --text">Get Directions</a></figcaption>
             </figure>
           </div>
         </div>

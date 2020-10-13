@@ -1,31 +1,44 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: "git-gateway"
+  branch: "master"
 
 media_folder: "_src/_assets/images/uploads"
-public_folder: "_assets/images/uploads"
+public_folder: "/_assets/images/uploads"
 
 collections:
   - name: "post"
-    label: "Posts"
+    label: "News & Updates"
     label_singular: "Post"
-    slug: "{{ slug }}"
+    folder: "_src/post"
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    extension: "md"
+    identifier_field: "title"
     create: true
     editor:
       preview: false
-    extension: "md"
-    folder: "_src/post"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Excerpt", name: "description", widget: "text" }
       - {
-          label: "Posted",
+          label: "Published Date",
           name: "date",
           widget: "date",
-          format: "DD MMMM YYYY",
+          format: "YYYY-MM-DD",
         }
-      - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          hint: "Should be around 1920px by 900px",
+        }
+      - {
+          label: "Small Image",
+          name: "image_small",
+          widget: "image",
+          hint: "Should be around 960px by 450px",
+        }
       - { label: "Content", name: "body", widget: "markdown" }
+
   - name: "project"
     label: "Projects"
     label_singular: "Project"
@@ -53,6 +66,7 @@ collections:
           default: 0,
           min: 0,
         }
+
   - name: "vacancy"
     label: "Vacancies"
     label_singular: "Vacancy"

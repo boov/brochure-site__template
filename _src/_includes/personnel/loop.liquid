@@ -1,7 +1,12 @@
-<div class="c_personnel-loop">
-  <h3 class="--h5 u_margin-bottom--half">{{ personnel.data.name }}</h3>
-  <h4 class="--alternative u_margin-bottom--double">{{ personnel.data.role }}</h4>
+<div class="c_card">
+  <div class="c_card__header">
+    <img class="c_card__image" src="{{ personnel.data.image }}" alt="{{ personnel.data.title }}">
+  </div>
+  <div class="c_card__content u_font-size--small">
+    <h3 class="--h4 u_margin-bottom--half">{{ personnel.data.name }}</h3>
+    <h4 class="--smallcaps u_margin-bottom--double">{{ personnel.data.role }}</h4>
 
-  {{ personnel.templateContent | safe }}
+    {{ personnel.templateContent | safe }}
 
+  </div>
 </div>

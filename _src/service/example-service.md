@@ -2,7 +2,7 @@
 title: Example Service
 description: Donec fringilla purus velit, in pulvinar justo pulvinar et. Etiam et porta turpis. Aliquam in nunc lacus. Nullam dignissim aliquet augue. Donec tristique est diam, et tincidunt magna fermentum et.
 date: 2020-01-01
-featured_image: https://source.unsplash.com/random/1440x810
+image: https://source.unsplash.com/random/1440x810
 ---
 
 Vivamus pellentesque aliquet condimentum. Etiam commodo hendrerit neque, vel viverra risus. Suspendisse potenti. Praesent id imperdiet metus.

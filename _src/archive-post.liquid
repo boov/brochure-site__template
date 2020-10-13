@@ -3,9 +3,10 @@ layout: default
 permalink: /posts/{%- if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus:1 }}/{%- endif %}index.html
 title: Post Archive Title
 description: Post Archive Description
+excerpt: Post Archive Excerpt
 pagination:
   data: collections.post
-  size: 10
+  size: 2
   alias: posts
 ---
 
@@ -24,22 +25,27 @@ pagination:
 
       </div>
 
-    {%- if pagination.pageLinks.length > 1 %}
+    {%- else %}
 
-      {%- include pagination %}
+      <div class="c_notification --negative">
+        <div class="c_notification__content">
+          <h3 class="c_notification__title">Need Error Message Here</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eius soluta reiciendis non debitis corrupti nulla similique commodi, consequatur ullam voluptate dolore doloribus provident vitae tenetur enim dolorem quia totam!</p>
+        </div>
+      </div>
 
     {%- endif %}
 
-  {%- else %}
+  </div>
 
-    <div class="c_notification --negative">
-      <div class="c_notification__content">
-        <h3 class="c_notification__title">Need Error Message Here</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eius soluta reiciendis non debitis corrupti nulla similique commodi, consequatur ullam voluptate dolore doloribus provident vitae tenetur enim dolorem quia totam!</p>
-      </div>
+  {%- if pagination.pageLinks.length > 1 %}
+
+    <div class="l_container">
+
+      {%- include pagination %}
+
     </div>
 
   {%- endif %}
 
-  </div>
 </section>

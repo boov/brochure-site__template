@@ -1,67 +1,19 @@
 ---
-cta_enabled: true
-hero_enabled: true
-hero_template: default
+layout: base
+header_template: default
+footer_template: default
 ---
 
-<!doctype html>
-<html lang="{{ app.locale }}">
-  <head>
-    <title>{{ title | default: seo.title }} - {{ company.name.display }}</title>
+<div class="c_site">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="{{ description | default: seo.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- include header-group %}
 
-    {%- include social-share %}
+  <main class="c_main-group">
 
-    <link rel="author" type="text/plain" href="/humans.txt?ver={{ app.time }}" />
+    {{ content | safe }}
 
-    <link rel="icon" type="image/png" sizes="16x16" href="/_assets/images/icon_16.png?ver={{ app.time }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="/_assets/images/icon_32.png?ver={{ app.time }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="/_assets/images/icon_96.png?ver={{ app.time }}">
+  </main>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap">
-    <link rel="stylesheet" href="/_assets/styles/main.css?ver={{ app.time }}">
+  {%- include footer-group %}
 
-    {%- include schema %}
-
-    {%- if seo.gtmContainer  %}
-
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ seo.gtmContainer }}');</script>
-
-    {%- endif %}
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" async></script>
-    <script src="/_assets/scripts/main.js?ver={{ app.time }}" defer></script>
-  </head>
-  <body>
-
-    {%- if seo.gtmContainer  %}<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ seo.gtmContainer }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>{%- endif %}
-
-    <div class="c_site">
-      <header class="c_header-group ~~invert">
-
-        {%- include banner %}
-        {%- include hero %}
-
-      </header>
-      <main class="c_main-group">
-
-        {{ content | safe }}
-
-      </main>
-      <footer class="c_footer-group ~~invert">
-
-        {%- include cta %}
-        {%- include footer %}
-        {%- include trim %}
-
-      </footer>
-    </div>
-
-    {%- include gutter %}
-
-  </body>
-</html>
+</div>

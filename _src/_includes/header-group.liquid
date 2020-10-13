@@ -1,0 +1,19 @@
+{%- if header_template == 'home' %}
+
+  <header class="c_header-group ~~invert">
+
+    {%- include header-group/banner %}
+    {%- include header-group/hero/home %}
+
+  </header>
+
+{%- else %}
+
+  <header class="c_header-group">
+
+    {%- include header-group/banner %}
+    {%- include header-group/hero %}
+
+  </header>
+
+{%- endif %}

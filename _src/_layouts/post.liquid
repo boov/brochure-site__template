@@ -8,7 +8,7 @@ layout: default
       <nav class="c_breadcrumbs">
         <ul class="c_breadcrumbs__list">
           <li class="c_breadcrumbs__item"><a href="/" class="c_breadcrumbs__link">Home</a></li>
-          <li class="c_breadcrumbs__item"><a href="/news" class="c_breadcrumbs__link">Latest News & Updates</a></li>
+          <li class="c_breadcrumbs__item"><a href="/posts" class="c_breadcrumbs__link">Latest News & Updates</a></li>
         </ul>
       </nav>
     </div>
@@ -16,10 +16,10 @@ layout: default
     <h2 class="--alternative u_margin-bottom--none">Posted {{ date | date: "%d %B %Y" }}</h2>
   </div>
   <div class="l_container --content">
-    <img src="{{ featured_image }}">
+    <img src="{{ image }}">
   </div>
   <div class="l_container --md">
-    <div class="c_content u_margin-bottom--s4 u_margin-bottom--none--md">
+    <div class="c_content">
 
       {{ content | safe }}
 
@@ -29,11 +29,11 @@ layout: default
   {%- if collections.post.size >= 3 %}
 
     <div class="l_container">
-      <hr class="--fancy --no-margin">
+      <hr class="--full u_margin-y--none">
     </div>
     <div class="l_container">
-      <h2 class="--h3 u_margin-bottom--double--lg">Latest Posts</h2>
-      <div class="l_grid --tight--sm --comfortable--md --columns-3--sm">
+      <h2 class="u_margin-bottom--double--lg">Other Posts</h2>
+      <div class="l_grid --columns-3--sm">
 
         {%- for post in collections.post limit:3  %}
 

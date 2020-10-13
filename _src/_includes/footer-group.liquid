@@ -1,0 +1,15 @@
+{%- if footer_template == 'template-name' %}
+
+  <footer class="c_footer-group ~~invert"></footer>
+
+{%- else %}
+
+  <footer class="c_footer-group ~~invert">
+
+    {%- include footer-group/cta %}
+    {%- include footer-group/footer %}
+    {%- include footer-group/trim %}
+
+  </footer>
+
+{%- endif %}
